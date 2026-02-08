@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proven Checklists for Content Marketers | AI Content Strategy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+            line-height: 1.6;
+            color: #1A1A1A;
+            background: #FFFFFF;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #FFFFFF;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: #0066CC;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #FFFFFF 100%);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1A1A1A;
+        }
+        
+        .hero .subheadline {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-visual {
+            margin: 40px 0;
+            font-size: 60px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #0066CC;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #0052A3;
+        }
+        
+        .cta-button.secondary {
+            background: #FF6B6B;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #E85555;
+        }
+        
+        /* Section Spacing */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        section:last-of-type {
+            border-bottom: none;
+        }
+        
+        section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        /* Value Prop Section */
+        .value-prop {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 40px;
+            background: #F8F9FA;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+        }
+        
+        .value-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .value-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .checklist-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: #F8F9FA;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0066CC;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+        
+        /* Features Section */
+        .features {
+            background: #FFFFFF;
+        }
+        
+        .features-list {
+            max-width: 600px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 20px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: #0066CC;
+            font-weight: 700;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: #F8F9FA;
+        }
+        
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-item h4 {
+            color: #0066CC;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Email Signup Form */
+        .email-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            margin: 40px auto 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #0066CC;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+        
+        .form-submit {
+            width: 100%;
+            background: #0066CC;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: #0052A3;
+        }
+        
+        .form-submit:active {
+            transform: scale(0.98);
+        }
+        
+        .success-message {
+            display: none;
+            padding: 20px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1A1A1A;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+        }
+        
+        .footer-section a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #0066CC;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #0066CC;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            section h2 {
+                font-size: 28px;
+            }
+            
+            .cta-button {
+                padding: 14px 32px;
+                font-size: 15px;
+            }
+            
+            nav .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Content Creator Checklists</div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-visual">✓</div>
+            <h1>Proven Checklists for Content Marketers</h1>
+            <p class="subheadline">3 actionable frameworks used by 100+ creators to rank higher, grow faster, and earn more. Join for free.</p>
+            <button class="cta-button" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'})">Get Free Checklists</button>
+        </div>
+    </section>
+    
+    <!-- Value Proposition -->
+    <section>
+        <div class="container">
+            <h2>What's Included</h2>
+            <div class="value-prop">
+                <div class="value-card">
+                    <div class="checklist-icon">📝</div>
+                    <h3>SEO Content Optimization</h3>
+                    <p><strong>12-step checklist</strong></p>
+                    <p>Keyword research → publishing</p>
+                    <p>Ready to use for any content</p>
+                    <p style="margin-top: 20px; font-size: 12px; color: #999;">[Download Inside]</p>
+                </div>
+                <div class="value-card">
+                    <div class="checklist-icon">📱</div>
+                    <h3>Social Media Strategy</h3>
+                    <p><strong>12-step checklist</strong></p>
+                    <p>Hook strategy → engagement</p>
+                    <p>Works on all platforms</p>
+                    <p style="margin-top: 20px; font-size: 12px; color: #999;">[Download Inside]</p>
+                </div>
+                <div class="value-card">
+                    <div class="checklist-icon">💌</div>
+                    <h3>Email Marketing Campaign</h3>
+                    <p><strong>12-step checklist</strong></p>
+                    <p>Lead magnet → conversions</p>
+                    <p>Build a list that converts</p>
+                    <p style="margin-top: 20px; font-size: 12px; color: #999;">[Download Inside]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Trusted by Content Creators</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Creators Using These Checklists</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Average Improvement in Consistency</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3,000+</div>
+                    <div class="stat-label">Downloads in First Month</div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; font-size: 24px; margin-bottom: 40px;">What Creators Are Saying</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"This saved me 5 hours per week on planning. Best free resource I've found."</p>
+                    <p class="testimonial-author">— Content Creator</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finally know what I'm doing with social media. These checklists are game-changers."</p>
+                    <p class="testimonial-author">— Marketing Manager</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Simple, practical, and actually works. Implementing these right now with my team."</p>
+                    <p class="testimonial-author">— Agency Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section>
+        <div class="container">
+            <h2>Why These Checklists Work</h2>
+            <ul class="features-list">
+                <li>Tested with real creators, not theory</li>
+                <li>One checklist per workflow (no fluff)</li>
+                <li>Copy-paste ready — use today</li>
+                <li>Updates & new checklists added monthly (members only)</li>
+                <li>Free forever (upgrade for advanced tools later)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions?</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>Are these really free?</h4>
+                    <p>Yes. Download all 3 checklists instantly when you join. No credit card needed.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use these for my agency/clients?</h4>
+                    <p>Absolutely. Customize and share with your team or clients.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often are they updated?</h4>
+                    <p>Every month we add new checklists based on member requests.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a paid version?</h4>
+                    <p>Coming soon! Free members get the checklists. Paid members get templates, scripts, and tools to use the checklists faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Email Signup -->
+    <section>
+        <div class="container">
+            <h2>Get Your Free Checklists</h2>
+            <div class="email-form" id="signup-form">
+                <form id="email-form" action="https://formspree.io/f/mdkngjwp" method="POST">
+                    <div class="form-group">
+                        <label for="name">First Name (optional)</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (required)</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <button type="submit" class="form-submit">Get Instant Access</button>
+                </form>
+                <div class="success-message" id="success-msg">
+                    ✓ Thanks! Check your email for the 3 checklists + weekly tips for content creators.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Content Creator Checklists</h4>
+                    <p style="color: #999;">Proven frameworks for content marketers to rank higher, grow faster, and earn more.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank">𝕏</a>
+                        <a href="https://linkedin.com" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p style="color: #999; margin-bottom: 15px;">Follow for weekly tips on content marketing</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Content Creator Checklists. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            // Form will submit to Formspree; show success message
+            setTimeout(function() {
+                document.getElementById('email-form').style.display = 'none';
+                document.getElementById('success-msg').style.display = 'block';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
