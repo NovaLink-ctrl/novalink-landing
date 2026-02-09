@@ -1,0 +1,1 @@
+Activation text stated by reversed.
